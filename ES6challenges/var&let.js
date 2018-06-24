@@ -22,6 +22,7 @@ catTalk();
 By declaring a let function in the block, we do not affect the varable outside.
 */
 
+/*
 function checkScope() {
   function checkScope() {
   "use strict";
@@ -33,3 +34,28 @@ function checkScope() {
     console.log("Function scope i is: ", i);
     return i;
   }
+*/
+
+  //Declare a Read-Only Variable with the const Keyword
+
+  /*
+  We can take it a step further by declaring the variable as const. This makes it into
+  a read only varable that is unable to be changed even inside a block.
+  */
+
+  /*
+  function printManyTimes(str) {
+  "use strict";
+
+  // change code below this line
+
+  const SENTENCE = str + " is cool!";
+  for(let i = 0; i < str.length; i+=2) {
+    console.log(SENTENCE);
+  }
+
+  // change code above this line
+
+}
+printManyTimes("freeCodeCamp");
+*/
