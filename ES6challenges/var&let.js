@@ -76,7 +76,8 @@ function editInPlace() {
   // s = [2, 5, 7]; <- this is invalid
   s[0] = 2;
   s[1] = 5;
-  s[7] = 7;
+  s[2] = 7;
+  
   // change code above this line
 }
 editInPlace();
