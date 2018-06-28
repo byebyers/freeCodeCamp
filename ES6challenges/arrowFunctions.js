@@ -21,3 +21,13 @@ const myFunc= () => "value"
 
 It is simpler to do it this way.
 */
+
+
+//Write Arrow Functions with Parameters
+
+/*
+Like a normal function you can pass Parameters through an arrow function.
+
+const doubler = (item) => item * 2;
+
+*/
