@@ -66,3 +66,18 @@ const squaredIntegers = squareList(realNumberArray);
 console.log(squaredIntegers);
 
 */
+
+
+//Set Default Parameters for Your Functions
+
+/*
+You can set default parameters in case the function is called without one.
+
+function greeting(name = "Anonymous") {
+  return "Hello " + name;
+}
+console.log(greeting("John")); // Hello John
+console.log(greeting()); // Hello Anonymous
+
+Pretty useful if for blank inputs
+*/
