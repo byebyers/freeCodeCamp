@@ -81,3 +81,6 @@ console.log(greeting()); // Hello Anonymous
 
 Pretty useful if for blank inputs
 */
+
+
+//Use the Rest Operator with Function Parameters
