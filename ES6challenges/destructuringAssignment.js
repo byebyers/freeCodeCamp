@@ -212,6 +212,7 @@ failure array. Each entry should be wrapped inside an li element with the class 
 text-warning, and listed within the resultDisplayArray.
 */
 
+/*
 const result = {
   success: ["max-length", "no-amd", "prefer-arrow-functions"],
   failure: ["no-var", "var-on-top", "linebreak"],
@@ -232,4 +233,19 @@ function makeList(arr) {
  *   <li class="text-warning">var-on-top</li>,
  *   <li class="text-warning">linebreak</li> ]
  **/
+
+/*
 const resultDisplayArray = makeList(result.failure);
+*/
+
+//Write Concise Object Literal Declarations Using Simple Fields
+
+/*
+const createPerson = (name, age, gender) => {
+  "use strict";
+  // change code below this line
+  return ({name, age, gender});
+  // change code above this line
+};
+console.log(createPerson("Zodiac Hasbro", 56, "male")); // returns a proper object
+*/
