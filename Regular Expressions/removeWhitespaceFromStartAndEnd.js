@@ -15,6 +15,14 @@ The .trim() method would work here, but you'll need to complete this challenge u
 //let hello = "   Hello, World!  ";
 //let wsRegex = /^\s*\w+,\s\w+!\s*/; // Change this line
 
-//By using \w*, you are looking for all matching alphabetical letters, then you simply need to drop in the comma, as well as the space after the comma, as well as the exclamation mark. 
+//By using \w*, you are looking for all matching alphabetical letters, then you simply need to drop in the comma, as well as the space after the comma, as well as the exclamation mark.
 
 //let result = hello.replace(wsRegex, 'Hello, World!'); // Change this line
+
+//Example with .trim()
+
+//let hello = "   Hello, World!  ";
+//let wsRegex = /\s\s+/g;
+//let result = hello.trim(wsRegex);
+
+//console.log(result);
