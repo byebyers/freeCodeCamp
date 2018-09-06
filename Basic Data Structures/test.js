@@ -1,18 +1,28 @@
-let foods = {
-  apples: 25,
-  oranges: 32,
-  plums: 28,
-  bananas: 13,
-  grapes: 35,
-  strawberries: 27
+let user = {
+  name: 'Kenneth',
+  age: 28,
+  data: {
+    username: 'kennethCodesAllDay',
+    joinDate: 'March 26, 2016',
+    organization: 'freeCodeCamp',
+    friends: [
+      'Sam',
+      'Kira',
+      'Tomo'
+    ],
+    location: {
+      city: 'San Francisco',
+      state: 'CA',
+      country: 'USA'
+    }
+  }
 };
-// do not change code above this line
 
-//console.log(foods.apples);
-
-
-function checkInventory(scannedItem) {
-  console.log(foods.scannedItem);
+function addFriend(userObj, friend) {
+  // change code below this line
+  userObj.data.friends.push(friend);
+  return userObj.data.friends;
+  // change code above this line
 }
 
-checkInventory("apples");
+console.log(addFriend(user, 'Pete'));
