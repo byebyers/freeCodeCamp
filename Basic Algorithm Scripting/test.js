@@ -1,14 +1,21 @@
-function confirmEnding(str, target) {
-  // "Never give up and good luck will find you."
-  // -- Falcor
-  //let n = str.split(" ");
-  //let ln = n[n.length - 1];
+function repeatStringNumTimes(str, num) {
+  // repeat after me
 
-  //console.log(ln.indexOf(target) === -1 ? false : true);
+  //mult = str * num;
+  //strArray = str.split();
+  //newArray = strArray * num;
 
-  str.substr(-target.length) === target ? true : false;
+  myArray = []
 
-  console.log(str.lastIndexOf(RegExp(target)) === -1 ? false : true);
+  for (let i = 0; i < num; i++) {
+    myArray.push(str);
+  }
+
+  let newStr = myArray.join("");
+
+  console.log(newStr);
+
+  //return str;
 }
 
-confirmEnding("Connor", "n");
+repeatStringNumTimes("abc", 3);
