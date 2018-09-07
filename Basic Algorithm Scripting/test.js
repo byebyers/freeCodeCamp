@@ -1,21 +1,21 @@
-function repeatStringNumTimes(str, num) {
-  // repeat after me
+function truncateString(str, num) {
+  // Clear out that junk in your trunk
 
-  //mult = str * num;
-  //strArray = str.split();
-  //newArray = strArray * num;
+  //console.log(newNum);
 
-  myArray = []
-
-  for (let i = 0; i < num; i++) {
-    myArray.push(str);
+  if (str.length > num) {
+    consolelog(str.substring(0, num) + "...");
   }
 
-  let newStr = myArray.join("");
+  else {
+    console.log(str);
+  }
 
-  console.log(newStr);
+  //let myTruncatedString = str.substring(0, num) + "...";
+  //console.log(myTruncatedString);
 
-  //return str;
+  //console.log(str.length > num ? true : false);
+//  return str;
 }
 
-repeatStringNumTimes("abc", 3);
+truncateString("A-tisket a-tasket A green and yellow basket", "A-tisket a-tasket A green and yellow basket".length);
