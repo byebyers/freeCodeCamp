@@ -1,21 +1,10 @@
-function truncateString(str, num) {
-  // Clear out that junk in your trunk
-
-  //console.log(newNum);
-
-  if (str.length > num) {
-    consolelog(str.substring(0, num) + "...");
+function findElement(arr, func) {
+  let num = 0;
+  for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i]);
   }
 
-  else {
-    console.log(str);
-  }
-
-  //let myTruncatedString = str.substring(0, num) + "...";
-  //console.log(myTruncatedString);
-
-  //console.log(str.length > num ? true : false);
-//  return str;
+  return num;
 }
 
-truncateString("A-tisket a-tasket A green and yellow basket", "A-tisket a-tasket A green and yellow basket".length);
+findElement([1, 2, 3, 4], num => num % 2 === 0);
