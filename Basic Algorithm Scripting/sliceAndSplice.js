@@ -15,9 +15,8 @@ Remember to use Read-Search-Ask if you get stuck. Write your own code.
 /*
 function frankenSplice(arr1, arr2, n) {
   // It's alive. It's alive!
-  let copy = arr1.slice();
   let newArr = arr2.slice();
-  newArr.splice(n,0,...copy);
+  newArr.splice(n,0,...arr1);
 
   return newArr;
 }
