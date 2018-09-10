@@ -1,16 +1,22 @@
-function getIndexToIns(arr, num) {
-  // Find my place in this sorted array.
-  let newNum = 0;
-  for (let i = 0; i < arr.length; i++) {
-    if (num > arr[i]) {
-      newNum += 1;
+function chunkArrayInGroups(arr, size) {
+
+var arraySize  = arr.length/size;
+
+var newArray = [];
+
+    for (var i = 0; i < arraySize ; i++){
+
+        var subArray= arr.splice(0,size);
+
+        newArray.push(subArray);
 
     }
 
-  }
-  console.log(newNum);
+console.log(newArray);
+
+
 }
 
-getIndexToIns([2, 20, 10], 19)
+chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6], 3);
 
 //return str.substr(-target.length) === target ? true : false;
