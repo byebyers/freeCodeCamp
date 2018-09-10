@@ -1,12 +1,16 @@
-function frankenSplice(arr1, arr2, n) {
-  // It's alive. It's alive!
-  let copy = arr1.slice();
-  console.log(copy);
+function getIndexToIns(arr, num) {
+  // Find my place in this sorted array.
+  let newNum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (num > arr[i]) {
+      newNum += 1;
 
-  arr2.splice(n,0,...copy);
-  console.log(arr2);
+    }
+
+  }
+  console.log(newNum);
 }
 
-frankenSplice([1, 2, 3], [4, 5, 6], 1);
+getIndexToIns([2, 20, 10], 19)
 
 //return str.substr(-target.length) === target ? true : false;
