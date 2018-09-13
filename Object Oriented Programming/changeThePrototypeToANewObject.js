@@ -33,7 +33,6 @@ A more efficient way is to set the prototype to a new object that already contai
 /*
 Add the property numLegs and the two methods eat() and describe() to the prototype of Dog by setting the prototype to a new object.
 */
-
 /*
 function Dog(name) {
   this.name = name;
