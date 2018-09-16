@@ -59,7 +59,7 @@ function Bear(name) {
 }
 
 Bear.prototype = {
-  constructor: BearuseIn
+  constructor: Bear
 };
 
 function Animal() { }
