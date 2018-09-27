@@ -1,12 +1,8 @@
-var globalArray = [5, 6, 3, 2, 9];
-function nonMutatingSort(arr) {
+function sentensify(str) {
   // Add your code below this line
-  let newArr = [];
-  newArr = newArr.concat(arr);
-  newArr.sort()
-  console.log(newArr);
-
-  return newArr;
+  let newArr = str.split(/[-]/);
+  let newStr = newArr.join(" ");
+  console.log(newStr);
   // Add your code above this line
 }
-nonMutatingSort(globalArray);
+sentensify("May-the-force-be-with-you");
