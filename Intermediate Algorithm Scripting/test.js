@@ -1,16 +1,17 @@
-
-
-function sumAll(arr) {
-  let lower = Math.min(arr[0],arr[1]);
-  let upper = Math.max(arr[0],arr[1]);
-  let total = 0;
-  for (let i = lower; i <= upper; i++) {
-    total += i;
+function whatIsInAName(collection, source) {
+  // What's in a name?
+  var arr = [];
+  //console.log(collection);
+  for (let i = 0; i < collection.length; i++) {
+    console.log(collection[i]);
   }
-  console.log(total);
-  return total;
+  // Only change code below this line
+  //let newArr = collection.map(function(a) {
+  //  console.log({first: a.first, last: a.last});
+  //})
+
+  // Only change code above this line
+  return arr;
 }
 
-
-
-sumAll([1, 4]);
+whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });
