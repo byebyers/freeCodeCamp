@@ -1,17 +1,17 @@
 function whatIsInAName(collection, source) {
   // What's in a name?
   var arr = [];
-  //console.log(collection);
-  for (let i = 0; i < collection.length; i++) {
-    console.log(collection[i]);
-  }
   // Only change code below this line
-  //let newArr = collection.map(function(a) {
-  //  console.log({first: a.first, last: a.last});
-  //})
-
+  var keys = Object.keys(source);
+  arr = collection.filter(function(obj) {
+    //Use the Array method every() instead of a for loop to check for every key from source.
+    return keys.every(function(key) {
+      // Check if the object has the property and the same value.
+      return obj.hasOwnProperty(key) && obj[key] === source[key];
+    });
+  });
   // Only change code above this line
-  return arr;
+  console.log(arr);
 }
 
 whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });
