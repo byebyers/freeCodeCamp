@@ -1,3 +1,12 @@
+//Spinal Tap Case
+
+/*
+Convert a string to spinal case. Spinal case is all-lowercase-words-joined-by-dashes.
+
+Remember to use Read-Search-Ask if you get stuck. Try to pair program. Write your own code.
+*/
+
+/*
 function spinalCase(str) {
   // "It's such a fine line between stupid, and clever."
   // --David St. Hubbins
@@ -5,7 +14,12 @@ function spinalCase(str) {
   let lowerStr = fixStr.toLowerCase();
   let splitStr = lowerStr.split(/\W+|[_]/).filter(x => x.length > 1);
   let joinStr = splitStr.join("-");
-  console.log(joinStr)
+  return joinStr;
 }
 
-spinalCase('The_Andy_Griffith_Show');
+spinalCase('This Is Spinal Tap');
+*/
+
+/*
+
+*/
