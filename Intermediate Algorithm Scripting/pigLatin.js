@@ -65,3 +65,61 @@ function translatePigLatin(str) {
 // test here
 translatePigLatin("consonant");
 */
+
+
+//Better way to solve this.
+
+
+/*
+function translatePigLatin(str) {
+    var strArr = [];
+    var tmpChar;
+
+    // check if the char is consonant using RegEx
+    function isConsonant(char) {
+        return !/[aeiou]/.test(char);
+    }
+
+    // return initial str + "way" if it starts with vowel
+    // if not - convert str to array
+    if (!isConsonant(str.charAt(0)))
+        return str + "way";
+    else
+        strArr = str.split("");
+
+    // push all consonats to the end of the array
+    while (isConsonant(strArr[0])) {
+        tmpChar = strArr.shift();
+        strArr.push(tmpChar);
+    }
+ // convert array to string and concatenate "ay" at the end
+ return strArr.join("")+"ay";
+}
+
+
+// test here
+
+translatePigLatin("consonant");
+*/
+
+
+
+//Best way to solve this!
+
+function translatePigLatin(str) {
+  console.log("str.search-> "+str.search(/[aeiou]/))
+  switch (str.search(/[aeiou]/)){
+     case -1: return str.concat('ay');
+     break;
+     case 0: return str.concat('way');
+     break;
+     default: return str.replace(/(^[^aeiou]+)(\w*)/,'$2$1ay');
+   }
+}
+
+translatePigLatin("rhythm");
+
+
+// test here
+
+translatePigLatin("consonant");
