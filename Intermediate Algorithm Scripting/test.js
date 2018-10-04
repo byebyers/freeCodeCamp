@@ -1,8 +1,18 @@
-function diffArray(arr1, arr2) {
-  let difference = arr1
-                  .filter(x => !arr2.includes(x))
-                  .concat(arr2.filter(x => !arr1.includes(x)))
-  console.log(difference);
+function myReplace(str, before, after) {
+  console.log(str.search(before));
+  let checkUpper = before[0];
+  let changedUpper = after[0];
+  if (checkUpper == checkUpper.toUpperCase()) {
+    changedUpper = changedUpper.toUpperCase;
+    console.log(changedUpper);
+  }
+  console.log(after);
+
+  switch (str.search(before)) {
+    case -1: return "No Match";
+    break;
+    default: return str.replace(before, after);
+  }
 }
 
-diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5, 6]);
+myReplace("A quick brown fox jumped over the lazy dog", "Jumped", "leaped");
