@@ -1,18 +1,33 @@
-function myReplace(str, before, after) {
-  console.log(str.search(before));
-  let checkUpper = before[0];
-  let changedUpper = after[0];
-  if (checkUpper == checkUpper.toUpperCase()) {
-    changedUpper = changedUpper.toUpperCase;
-    console.log(changedUpper);
-  }
-  console.log(after);
+function pairElement(str) {
+  let arr = [];
+  let obj = [];
 
-  switch (str.search(before)) {
-    case -1: return "No Match";
-    break;
-    default: return str.replace(before, after);
+  for (let i = 0; i < str.length; i++) {
+    console.log(str[i]);
+    if (str[i] == "A") {
+      obj = [str[i], "T"];
+      arr.push(obj);
+    }
+    else if (str[i] == "T") {
+      obj = [str[i], "A"];
+      arr.push(obj);
+    }
+    else if (str[i] == "C") {
+      obj = [str[i], "G"];
+      arr.push(obj);
+    }
+    else {
+      obj = [str[i], "C"];
+      arr.push(obj);
+    }
   }
+  console.log(arr);
 }
 
-myReplace("A quick brown fox jumped over the lazy dog", "Jumped", "leaped");
+pairElement("ACG");
+
+
+/*
+ATCG
+TAGC
+*/
