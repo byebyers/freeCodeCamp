@@ -1,17 +1,16 @@
-function fearNotLetter(str) {
-  let key = "abcdefghijklmnopqrstuvwxyz";
-  let splitKey = key.split("");
-  let start = key.search(str[0]);
-  let strLength = str.length;
-  let strKey = splitKey.splice(start, strLength);
-  let copyStr = str.split("");
-  let difference = strKey.filter(x => !copyStr.includes(x));
-  difference = difference.join("");
+function uniteUnique(arr) {
+  let args = Array.from(arguments);
+  let newArr = [];
 
+  for (let i = 0; i < args.length; i++) {
+    for (let j = 0; j < args[i].length; j++) {
+      if(newArr.indexOf(args[i][j]) == -1) {
+        newArr.push(args[i][j]);
+      }
+    }
+  }
 
-
-  console.log(difference);
-  return str;
+  console.log(newArr);
 }
 
-fearNotLetter("abce");
+uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);
