@@ -1,33 +1,17 @@
-function pairElement(str) {
-  let arr = [];
-  let obj = [];
+function fearNotLetter(str) {
+  let key = "abcdefghijklmnopqrstuvwxyz";
+  let splitKey = key.split("");
+  let start = key.search(str[0]);
+  let strLength = str.length;
+  let strKey = splitKey.splice(start, strLength);
+  let copyStr = str.split("");
+  let difference = strKey.filter(x => !copyStr.includes(x));
+  difference = difference.join("");
 
-  for (let i = 0; i < str.length; i++) {
-    console.log(str[i]);
-    if (str[i] == "A") {
-      obj = [str[i], "T"];
-      arr.push(obj);
-    }
-    else if (str[i] == "T") {
-      obj = [str[i], "A"];
-      arr.push(obj);
-    }
-    else if (str[i] == "C") {
-      obj = [str[i], "G"];
-      arr.push(obj);
-    }
-    else {
-      obj = [str[i], "C"];
-      arr.push(obj);
-    }
-  }
-  console.log(arr);
+
+
+  console.log(difference);
+  return str;
 }
 
-pairElement("ACG");
-
-
-/*
-ATCG
-TAGC
-*/
+fearNotLetter("abce");
