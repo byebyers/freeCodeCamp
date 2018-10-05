@@ -1,16 +1,19 @@
-function uniteUnique(arr) {
-  let args = Array.from(arguments);
+function convertHTML(str) {
+  // &colon;&rpar;
   let newArr = [];
-
-  for (let i = 0; i < args.length; i++) {
-    for (let j = 0; j < args[i].length; j++) {
-      if(newArr.indexOf(args[i][j]) == -1) {
-        newArr.push(args[i][j]);
-      }
+  let item;
+  for (let i = 0; i < str.length; i++) {
+    item = str[i];
+    switch (str[i]) {
+      case '&':
+        item = item.replace('&', '&amp;');
+        break;
+      default:
+        break;
     }
+    newArr.push(item);
   }
-
-  console.log(newArr);
+  console.log(newArr.join(""));
 }
 
-uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);
+convertHTML("Dolce & Gabbana");
