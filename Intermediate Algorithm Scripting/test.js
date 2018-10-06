@@ -1,19 +1,24 @@
-function convertHTML(str) {
-  // &colon;&rpar;
-  let newArr = [];
-  let item;
-  for (let i = 0; i < str.length; i++) {
-    item = str[i];
-    switch (str[i]) {
-      case '&':
-        item = item.replace('&', '&amp;');
-        break;
-      default:
-        break;
+function printPrime(value) {
+    var primes = [];
+    for(var i = 2; i < value; i++) {
+        primes[i] = true;
     }
-    newArr.push(item);
-  }
-  console.log(newArr.join(""));
+    var limit = Math.sqrt(value);
+    console.log(limit);
+    for(var i = 2; i < limit; i++) {
+        console.log(i);
+        if(primes[i] === true) {
+            for(var j = i * i; j < value; j += i) {
+                console.log(j);
+                primes[j] = false;
+            }
+        }
+    }
+    for(var i = 2; i < value; i++) {
+        if(primes[i] === true) {
+            console.log(i + " " + primes[i]);
+        }
+    }
 }
 
-convertHTML("Dolce & Gabbana");
+printPrime(10);
