@@ -117,9 +117,9 @@ function translatePigLatin(str) {
    }
 }
 
-translatePigLatin("rhythm");
+
 
 
 // test here
 
-translatePigLatin("consonant");
+console.log(translatePigLatin("consonant"));
