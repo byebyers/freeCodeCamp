@@ -89,3 +89,23 @@ function fearNotLetter(str) {
 // test here
 fearNotLetter("abce");
 */
+
+/*
+Another way to solve This
+
+function fearNotLetter(str) {
+  let strArr = str.split("");
+  let compare = Number(str[0].charCodeAt(0)) - 1;
+  //console.log(compare)
+  for (let i = 0; i < strArr.length; i++) {
+    compare += 1;
+    if (strArr[i].charCodeAt(0) != compare) {
+      return String.fromCharCode(strArr[i].charCodeAt(0) - 1);
+    }
+    //console.log(compare)
+    //console.log(strArr[i].charCodeAt(0));
+  }
+}
+
+fearNotLetter("stvwx");
+*/

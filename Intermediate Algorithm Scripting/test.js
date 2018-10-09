@@ -3,7 +3,7 @@ function myReplace(str, before, after) {
      after = after.charAt(0).toUpperCase()+after.slice(1);
   }
   let change = str.replace(before, after);
-  console.log(change);
+  return change;
 }
 
 myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped");
