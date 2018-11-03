@@ -1,9 +1,15 @@
-function myReplace(str, before, after) {
-  if (before.charAt(0) == before.charAt(0).toUpperCase()) {
-     after = after.charAt(0).toUpperCase()+after.slice(1);
+function truthCheck(collection, pre) {
+  // Is everyone being true?
+  var size = collection.length;
+  var result = true;
+  for (let i = 0; i < size; i++) {
+    let key = Object.keys(collection[i]);
+    let test = key.every(x => key.includes(pre));
+    if (test === false) {
+      result = false;
+    }
   }
-  let change = str.replace(before, after);
-  return change;
+  return result;
 }
 
-myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped");
+truthCheck([{"user": "Tinky-Winky", "sex": "male"}, {"user": "Dipsy", "sex": "male"}, {"user": "Laa-Laa", "sex": "female"}, {"user": "Po", "sex": "female"}], "sex");
