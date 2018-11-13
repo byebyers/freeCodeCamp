@@ -1,31 +1,20 @@
-
-var input = "Caesar Cipher";
-
-function rot13(str) {
-    var alphabet = "abcdefghijklmnopqrstuvwxyz";
-    var newStr = "";
-
-    for (var i = 0; i < str.length; i++) {
-        var char = str[i],
-            isUpper = char === char.toUpperCase() ? true : false;
-
-        char = char.toLowerCase();
-
-        if (alphabet.indexOf(char) > -1) {
-            var newIndex = alphabet.indexOf(char) + 13;
-            if(newIndex < alphabet.length) {
-            	isUpper ? newStr += alphabet[newIndex].toUpperCase() : newStr += alphabet[newIndex];
-            } else {
-             	var shiftedIndex = -(alphabet.length - newIndex);
-                isUpper ? newStr += alphabet[shiftedIndex].toUpperCase() : newStr += alphabet[shiftedIndex];
-            }
-        } else {
-           newStr += char;
-        }
+function telephoneCheck(str) {
+  // Good luck!
+  let phrase = str;
+  let reference = /\D/g;
+  let symbole = (;
+  let checkLength = str.replace(reference, "").length;
+  if (checkLength > 11 | checkLength < 10) {
+    return false;
+  }
+  if (checkLength === 11) {
+    if (phrase[0] != 1) {
+      return false;
     }
-    return newStr;
+  }
+  console.log(phrase.search(symbole));
+  return true;
 }
 
 
-// Change the inputs below to test
-rot13("SERR PBQR PNZC");
+telephoneCheck(("(555-555-5555"));
