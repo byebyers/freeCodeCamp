@@ -40,3 +40,5 @@ const logoutUser = () => {
     type: 'LOGOUT'
   }
 };
+
+console.log('test');
